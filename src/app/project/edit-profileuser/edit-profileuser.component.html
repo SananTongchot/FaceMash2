@@ -1,0 +1,49 @@
+<mat-toolbar style="height: 70px; background-color: rgb(93, 91, 91);">
+    <a><img style="width: 70px;" src="/assets/img/iconteen.png" alt=""></a>
+    <span style="flex: 1 1 auto;"></span>
+    <button routerLink="" mat-flat-button style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Log out</span>
+    </button>
+    <button [routerLink]="['/profileuser']" mat-flat-button
+        style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Back</span>
+    </button>
+</mat-toolbar>
+
+<div class="container">
+    <img class="imgbcat" src="/assets/img/editcatei.png" alt="">
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <mat-card class="card">
+            <a (click)="fileInput.click()"><img class="imgpro" src="{{user[0]?.avatar}}" alt=""></a>
+            <input #fileInput type="file" (change)="onFileUpdate($event, user[0]?.id)" accept="image/*" style="display: none;">
+
+            <span style="margin-right: 55%; margin-top: 30px;">
+                Username
+            </span>
+               <input type="text" class="input" [(ngModel)]="name" [ngModelOptions]="{standalone : true}"
+                matInput placeholder="{{user[0].name}}" id="name" [required]="true" required>
+
+            <span style="margin-right: 41%; margin-top: 30px;">
+               New password
+            </span>
+            <input type="text" class="input" [(ngModel)]="password" [ngModelOptions]="{standalone : true}"
+            matInput placeholder="{{user[0].password}}" id="password" [required]="true" required>
+
+            <span style="margin-right: 41%; margin-top: 30px;">
+                Email
+             </span>
+             <input type="email" class="input" [(ngModel)]="email" [ngModelOptions]="{standalone : true}"
+             matInput placeholder="{{user[0].email}}" id="email" [required]="true" required>
+            <!-- <span style="margin-right: 46%; margin-top: 30px;">
+                New password
+            </span>
+            <input type="text" class="input" [(ngModel)]="name" [ngModelOptions]="{standalone : true}"
+            matInput placeholder="" id="name" [required]="true" required> -->
+
+            <button (click)="changeImage(user[0].id)" class="button" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                Confirm edits
+            </button>
+
+        </mat-card>
+    </div>
+</div>

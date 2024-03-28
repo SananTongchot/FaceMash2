@@ -1,0 +1,48 @@
+<mat-toolbar style="height: 70px; background-color: rgb(93, 91, 91);">
+    <a><img style="width: 70px;" src="/assets/img/iconteen.png" alt=""></a>
+    <span style="flex: 1 1 auto;"></span>
+    <button routerLink="" mat-flat-button style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Log out</span>
+    </button>
+    <button [routerLink]="['/profileuser']" mat-flat-button
+        style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Back</span>
+    </button>
+</mat-toolbar>
+
+<div>
+    <div class="container">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; flex-direction: row;">
+                <span class="abril-fatface-regular">Edit/Delete</span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <div class="edit">
+                    <a (click)="fileInput.click()">
+                <img class="img" src="{{cat[0].image}}" alt="">
+                   <input #fileInput type="file" (change)="onFileUpdate($event, cat[0].id)" 
+                   accept="image/*" style="display: none;">
+             </a> 
+             <div>
+                <span style="margin-right: 26%; margin-top: 20px;">Name</span>
+                <input type="text" class="input" [(ngModel)]="name" matInput
+                 placeholder="{{ cat[0]?.name }}" id="name" [required]="true" required>
+
+            </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="changeImage(id)" class="button">   <!-- <button class="upimg" >upload</button> -->
+                        <span>
+                            Edit
+                        </span>
+                    </button>
+                    <button class="button2">
+                        <span>
+                            Delete
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

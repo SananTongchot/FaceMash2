@@ -1,0 +1,41 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<div>
+    <img class="logo" src="/assets/img/Namelogo1.png" alt="">
+    <img class="backk" src="/assets/img/Bcatpng.png" alt="">
+    <div class="column">
+        <mat-card class="card">
+            <img style=" width: 190px; margin-top: 25px;" src="/assets/img/logologin.png" alt="">
+
+            <span style="margin-right: 55%; margin-top: 40px;">
+                Username
+            </span>
+            <input type="text" style=" text-indent: 10px;"  class="input" [(ngModel)]="name" [ngModelOptions]="{standalone : true}" matInput placeholder="" id="name" [required]="true">
+            <mat-icon class="material-symbols-outlined" style="margin-top: -35px; margin-left: 60%; font-size: 25px;">
+                pets
+            </mat-icon>
+
+            <span style="margin-right: 55%; margin-top: 40px;">
+                Password
+            </span>
+            <input type="text" style=" text-indent: 10px;" class="input" [(ngModel)]="password" [ngModelOptions]="{standalone : true}" matInput placeholder="" id="password" [required]="true">
+            <mat-icon class="material-symbols-outlined" style="margin-top: -35px; margin-left: 60%; font-size: 25px;">
+                lock
+            </mat-icon>
+
+            <label style="margin-top: 40px; margin-right: 42%; ">
+                <input type="checkbox" name="option1"> Remember me
+            </label>
+
+            <button (click)="check(name,password)" class="button" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                Login
+                <mat-icon class="material-symbols-outlined">
+                        login               
+                </mat-icon>
+            </button>
+
+            <a  [routerLink]="['/signup']" style="color: black; margin-top: 35px; font-size: 19px"> Sign up</a>
+
+        </mat-card>
+    </div>
+</div>

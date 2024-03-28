@@ -1,0 +1,22 @@
+<mat-toolbar style="height: 70px; background-color: rgb(93, 91, 91);">
+    <a><img style="width: 70px;" src="/assets/img/iconteen.png" alt=""></a>
+    <span style="flex: 1 1 auto;"></span>
+    <button routerLink="" mat-flat-button style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Log out</span>
+    </button>
+    <button [routerLink]="['/profileuser']" mat-flat-button
+        style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Back</span>
+    </button>
+</mat-toolbar>
+
+<div class="container">
+    <div class="Big">
+        <div style="display: flex; flex-direction: row; justify-content: center;">
+            <span class="abril-fatface-regular">Check the picture ranking ❤️</span>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-left: 100px; margin-right: 100px; margin-top: 50px;">
+            <a [routerLink]="['/preimg']"><img class="img5" src="/assets/img/excat1.png" alt=""></a>
+        </div>
+    </div>
+</div>

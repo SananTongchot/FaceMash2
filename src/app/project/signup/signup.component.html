@@ -1,0 +1,50 @@
+<div class="container-fluid" style="height: 100%;">
+    <div style="display: flex; flex-direction: row; width: 100%; height: 100%;">
+        <div style="display: flex; flex-direction: column; width: 50%;">
+            <img style="height: 100%;" src="/assets/img/bsign.png" alt="">
+        </div>
+        <div class="sign">
+            <div style="display: flex;flex-direction: column;margin-bottom: 100px;">
+                <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; ">
+                    <span class="abril-fatface-regular">Create new account</span>
+                    <img style="width: 100px; margin-top: 30px; " src="/assets/img/teencat.png" alt="">
+                </div>
+                <form>
+                     <div style="display: flex;flex-direction: column;">
+                    <div class="form-row">
+                        <div>
+                            <span style="margin-right: 26%; margin-top: 20px;">Username</span>
+                            <input type="text" class="input" [(ngModel)]="name" [ngModelOptions]="{standalone : true}" matInput placeholder="" id="name" [required]="true" required>
+                        </div>
+                    </div>
+                    <div class="form-row" style="margin-right: 30px;">
+                        <div>
+                            <span style="margin-right: 26%; margin-top: 20px;">Email</span>
+                            <input type="email" class="input" [(ngModel)]="email"  [ngModelOptions]="{standalone : true}" matInput placeholder="" id="email" [required]="true" required> 
+                        </div>
+                    </div>
+                    <div class="form-row" >
+                        <div>
+                            <span style="margin-right: 26%; margin-top: 20px;">Password</span>
+                            <input type="text" class="input" [(ngModel)]="password"  [ngModelOptions]="{standalone : true}" matInput placeholder="" id="password" [required]="true" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div style="margin-right: 70px;"> 
+                             
+                            <button  [routerLink]="['/login']" type="submit" class="button" (click)="validateAndSignUp()"
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center;"
+                             >
+                            Sign up
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                </form>
+               
+            </div>
+
+        </div>
+    </div>
+
+</div>

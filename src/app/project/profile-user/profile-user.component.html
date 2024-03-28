@@ -1,0 +1,77 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<mat-toolbar style="height: 70px; background-color: rgb(93, 91, 91);">
+    <a><img style="width: 70px;" src="/assets/img/iconteen.png" alt=""></a>
+    <span style="flex: 1 1 auto;"></span>
+    <button routerLink="" mat-flat-button style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Log out</span>
+    </button>
+    <button [routerLink]="['/user']" mat-flat-button
+        style="background-color: transparent; color: aliceblue; border: none; ">
+        <span style="font-size: 17px;">Back</span>
+    </button>
+</mat-toolbar>
+
+<div class="container">
+    <div class="head">
+        <div style="display: flex; flex-direction: row; align-items: center; height: 25%;   ">
+            <div style="display: flex; flex-direction: column;">
+                <img class="imgpro" src="{{user[0]?.avatar}}" alt="">
+            </div>
+            <div style="display: flex; flex-direction: column; margin-left: 20px;">
+
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <span class="abril-fatface-regular">{{user[0].name}}</span>
+                    <button [routerLink]="['/editpro']" mat-raised-button
+                        style="border-radius: 20px; margin-top: 20px; margin-left: 20px;">
+                        Edit profile
+                    </button>
+                    <button [routerLink]="['/imgrank']" mat-raised-button
+                        style="border-radius: 20px; margin-top: 20px; margin-left: 20px;">
+                        Picture ranking
+                    </button>
+                </div>
+
+                <!-- <div style="display: flex; flex-direction: row; align-items: center;">
+                    <span class="abril-fatface-regular2">Vote : 26k</span>
+                    <mat-icon class="material-symbols-outlined2" style="margin-left: 5px;">
+                        favorite
+                    </mat-icon>
+                </div> -->
+                <!-- ใส่คำแนะนำ -->
+                <!-- <span class="text">birthday : 28/06/2020 American Shorthair</span> -->
+
+                <span class="text">Add up to 5 photos.</span>
+            </div>
+        </div>
+        <hr style="height: 3px; background-color: rgb(255, 255, 255); border: none; margin-top: 10px;  width: 95%;">
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 35px; margin-left: 70px;  margin-right: 70px;">
+            <div *ngFor="let i of img" style="display: flex; flex-direction: row;">
+                <!-- <div [routerLink]="['/editimg']" [queryParams]="{ id: i.id }" routerLinkActive="router-link-active">
+                </div> -->
+                <a  [routerLink]="['/editimg']" [queryParams]="{ id: i.id }" routerLinkActive="router-link-active"><img class="img5" src="{{i.image}}" alt="">
+
+                </a> 
+            <!--     <input #fileInput type="file" (change)="onFileUpdate($event, i.id)" accept="image/*" style="display: none;"> -->
+            </div>
+            
+        </div>
+        
+
+        <div
+            style="display: flex; flex-direction: column; margin-top: 20px; justify-content: center; align-items: center; ">
+            <div style="display: flex; flex-wrap: wrap;">
+                <!-- <a (click)="fileInput.click()"><img class="imgpro" src="{{user[0]?.avatar}}" alt=""></a> -->
+                <a (click)="fileInput.click()"><img class="imgpro" src="" alt=""></a>
+                <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;">
+            </div>	          
+                    <!-- <div style=" margin-left:  -70px;">
+                <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;">	                <!-- <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;"> -->
+                          <!-- <button class="upimg" (click)="uploadImage()">upload</button> -->
+        </div>
+
+    </div>
+
+</div>

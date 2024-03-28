@@ -1,0 +1,47 @@
+.backk {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo {
+  width: 230px;
+  margin-top: 35px;
+  margin-left: 30px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  margin-top: -60px;
+  width: 450px;
+  height: 650px;
+  border-radius: 25px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+.input {
+  width: 310px;
+  height: 40px;
+  border-radius: 7px;
+  margin-top: 7px;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.button {
+  width: 310px;
+  height: 45px;
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: rgb(94, 94, 94);
+  border: 0;
+  color: aliceblue;
+  font-size: 19px;
+}
+.button:hover {
+  background-color: #a1a2a1; /* สีพื้นหลังเมื่อเมาส์ชี้ไปที่ปุ่ม */
+}

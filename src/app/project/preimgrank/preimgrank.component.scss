@@ -1,0 +1,18 @@
+.Big{
+    height: 600px;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+.img1{
+    width: 360px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-left: 30px;
+}
